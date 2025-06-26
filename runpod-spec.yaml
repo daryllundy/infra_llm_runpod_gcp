@@ -1,0 +1,10 @@
+# Captured RunPod pod spec for llm-a40-vllm
+name: llm-a40-vllm
+image: vllm/vllm-openai:latest
+gpu: A100_80GB x1
+ports:
+  - containerPort: 8000
+env:
+  - MODEL_ID=meta-llama/Llama-3-8B-Instruct.Q4_K_M.gguf
+volume:
+  sizeGB: 30
